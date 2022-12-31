@@ -7,6 +7,7 @@
   --primary-brand-color: #4d5ae5;
   --accent-color: #e7e9fc;
   --dark-shadows-color: #2e2f42;
+  --customers-logo-color: #8e8f99;
 }
 
 /* body */
@@ -146,8 +147,17 @@ ul {
 .hero.section {
   padding-top: 192px;
   padding-bottom: 192px;
+  max-width: 1440px;
+  height: 600px;
 
   background-color: var(--dark-shadows-color);
+  background-image: linear-gradient(
+      rgba(46, 47, 66, 0.7),
+      rgba(46, 47, 66, 0.7)
+    ),
+    url("../images/people-office.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
   text-align: center;
 }
 
@@ -198,11 +208,27 @@ ul {
 }
 
 .advantages-list .item {
-  width: 264px;
+  width: calc((100% - 72px) / 4);
 }
 
 .advantages-list .item + .item {
   margin-left: 24px;
+}
+
+.advantages-box-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 112px;
+  margin-bottom: 8px;
+
+  background: #f4f4fd;
+  border-radius: 4px;
+}
+
+.advantages-icon {
+  width: 64px;
+  height: 64px;
 }
 
 .advantages-title {
@@ -252,7 +278,7 @@ ul {
   display: flex;
 }
 
-.team-list .item + .item {
+.team-list > .item + .item {
   margin-left: 24px;
 }
 
@@ -261,11 +287,38 @@ ul {
   padding-bottom: 32px;
 }
 
-.team-list .item {
+.team-list > .item {
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
   border-radius: 0px 0px 4px 4px;
   background-color: var(--white-bg-color);
+}
+
+.team-text {
+  margin-bottom: 8px;
+}
+
+.social-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 24px;
+}
+
+.social-link {
+  display: flex;
+  width: 40px;
+  height: 40px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+
+  background-color: var(--primary-brand-color);
+}
+
+.team-icon {
+  width: 16px;
+  height: 16px;
 }
 
 .team-foto {
@@ -286,6 +339,27 @@ ul {
   line-height: 1.5;
   text-align: center;
   letter-spacing: 0.02em;
+}
+
+/* Customers */
+.customers-list {
+  display: flex;
+  column-gap: 24px;
+}
+
+.customers-link {
+  display: flex;
+  width: 168px;
+  height: 88px;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid var(--customers-logo-color);
+  border-radius: 4px;
+}
+
+.customers-logo {
+  width: 104px;
+  height: 56px;
 }
 
 /* footer */
@@ -357,7 +431,7 @@ ul {
 }
 
 .projects-list .item {
-  width: 360px;
+  width: calc((100% - 48px) / 3);
   margin-right: 24px;
   margin-bottom: 48px;
   border: 0.5px solid #f4f4fd;
