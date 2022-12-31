@@ -8,6 +8,7 @@
   --accent-color: #e7e9fc;
   --dark-shadows-color: #2e2f42;
   --customers-logo-color: #8e8f99;
+  --success-color: #31d0aa;
 }
 
 /* body */
@@ -195,7 +196,14 @@ ul {
 
 .hero-btn:hover,
 .hero-btn:focus {
-  background-color: #404bbf;
+  background: var(--primary-brand-color);
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+}
+
+.hero-btn:active {
+  background: #404bbf;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 
 /* advantages-section */
@@ -358,8 +366,17 @@ ul {
 }
 
 .customers-logo {
+  fill: #8e8f99;
   width: 104px;
   height: 56px;
+}
+
+.customers-logo:hover {
+  fill: var(--primary-brand-color);
+}
+
+.customers-link:hover {
+  border: 1px solid var(--primary-brand-color);
 }
 
 /* footer */
@@ -390,6 +407,45 @@ ul {
   letter-spacing: 0.02em;
 }
 
+.footer > .container {
+  display: flex;
+}
+
+.social-box {
+  margin-left: 120px;
+}
+
+.social-title {
+  margin-bottom: 16px;
+
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: var(--white-bg-color);
+}
+
+.social-footer-link {
+  display: flex;
+  width: 40px;
+  height: 40px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.social-footer-link:hover,
+.social-footer-link:focus {
+  background-color: var(--success-color);
+}
+
+.social-icon {
+  width: 24px;
+  height: 24px;
+}
+
 /* portfolio */
 .portfolio.section {
   padding-top: 96px;
@@ -410,6 +466,9 @@ ul {
 .filter-btn:focus {
   color: var(--white-bg-color);
   background-color: var(--primary-brand-color);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
+  border: 1px solid var(--primary-brand-color);
 }
 
 .filter-btn {
@@ -437,6 +496,9 @@ ul {
   border: 0.5px solid #f4f4fd;
 
   background-color: var(--white-bg-color);
+}
+
+.projects-list .item:hover {
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 
