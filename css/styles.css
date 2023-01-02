@@ -378,7 +378,8 @@ ul {
   height: 56px;
 }
 
-.customers-link:hover {
+.customers-link:hover,
+.customers-link:focus {
   border: 1px solid var(--primary-brand-color);
   fill: var(--hover-color);
 }
